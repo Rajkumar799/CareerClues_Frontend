@@ -1,0 +1,254 @@
+/* Mini Top Bar */
+.mini-header-top-bar {
+  position: fixed !important;
+  width: 100%;
+  background-color: #121d58;
+  color: white;
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  z-index: 1000;
+}
+
+.mini-header-left span {
+  font-weight: bold;
+}
+
+.mini-header-right a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.mini-header-right a:hover {
+  color: #000;
+}
+
+.mini-header-right i {
+  margin-right: 6px;
+}
+
+
+
+/* Main Header */
+.home-page-header {
+  position: fixed;
+  top: 30px; /* Leave space for mini top bar */
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: #000000;
+  z-index: 999;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Logo */
+.home-page-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home-page-logo:hover {
+  transform: scale(1.1) rotate(5deg);
+  text-shadow: none;
+}
+
+/* Navigation Links */
+.home-page-nav-menu.home-page-large-screen {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.home-page-nav-link {
+  margin-left: 2rem;
+  color: #000000;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.home-page-nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: #007bff;
+  transition: width 0.3s ease;
+}
+
+.home-page-nav-link:hover::after,
+.home-page-nav-link.home-page-active::after {
+  width: 100%;
+}
+
+.home-page-nav-link:hover {
+  color: #007bff;
+  text-shadow: none;
+  transform: translateY(-2px);
+}
+
+.home-page-nav-link.home-page-active {
+  color: #007bff;
+  text-shadow: none;
+}
+
+
+/* Mobile Menu */
+.home-page-nav-menu.home-page-mobile {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 2rem;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 0 0 8px 8px;
+  animation: home-page-slideDown 0.3s ease forwards;
+}
+
+.home-page-nav-menu.home-page-mobile.home-page-open {
+  display: flex;
+}
+
+.home-page-mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: relative;
+  z-index: 1001;
+  margin-right: 30px;
+}
+
+/* Hamburger */
+.home-page-hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background: #00ffcc;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.home-page-hamburger::before,
+.home-page-hamburger::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background: #00ffcc;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.home-page-hamburger::before {
+  top: -8px;
+}
+
+.home-page-hamburger::after {
+  top: 8px;
+}
+
+/* Hamburger to X animation */
+.home-page-mobile-menu-toggle.home-page-open .home-page-hamburger {
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-page-mobile-menu-toggle.home-page-open .home-page-hamburger::before {
+  transform: rotate(45deg);
+  top: 0;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+.home-page-mobile-menu-toggle.home-page-open .home-page-hamburger::after {
+  transform: rotate(-45deg);
+  top: 0;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+
+/* Animations */
+@keyframes home-page-slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .home-page-mobile-menu-toggle {
+    display: block;
+  }
+
+  .home-page-nav-menu.home-page-large-screen {
+    display: none !important;
+  }
+
+  .home-page-nav-link {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .home-page-nav-menu.home-page-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page-header {
+    padding: 1rem;
+  }
+
+  .home-page-logo {
+    font-size: 1.2rem;
+  }
+
+  .home-page-mobile-menu-toggle {
+    padding: 0.3rem;
+  }
+
+  .home-page-hamburger,
+  .home-page-hamburger::before,
+  .home-page-hamburger::after {
+    width: 20px;
+  }
+}

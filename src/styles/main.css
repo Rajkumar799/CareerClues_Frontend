@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    width: 100%;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #e6f0fa;
+  }
+  
+  .header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .hero {
+    background: #1a3c50;
+    color: white;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+  }
+  
+  .card {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card img {
+    max-width: 100%;
+  }
+  
+  .about, .contact-form, .testimonials {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .contact-form input, .contact-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+  }
+  
+  .footer {
+    background: #1a3c50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .admin-login, .admin-dashboard {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .admin-login form, .admin-dashboard form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .admin-dashboard nav {
+    margin-bottom: 20px;
+  }
+  
+  .admin-dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .admin-dashboard th, .admin-dashboard td {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  .contact-form table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  .contact-form th, .contact-form td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  .contact-form th {
+    background-color: #f2f2f2;
+  }
+  .contact-form button {
+    padding: 10px 20px;
+    background-color: #1a3c50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .contact-form button:hover {
+    background-color: #133544;
+  }

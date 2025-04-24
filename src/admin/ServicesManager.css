@@ -1,0 +1,310 @@
+.services-manager {
+  padding: clamp(1rem, 3vw, 2rem);
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - 80px);
+}
+
+.services-manager::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(0, 255, 204, 0.1) 0%, transparent 70%);
+  animation: pulse 12s infinite alternate;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.8); }
+  100% { transform: scale(1.2); }
+}
+
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  position: relative;
+  z-index: 1;
+}
+
+.services-header h2 {
+  color: #00ffcc;
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.reset-btn {
+  padding: clamp(0.4rem, 1vw, 0.6rem) clamp(0.8rem, 2vw, 1rem);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.service-form {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: relative;
+  z-index: 1;
+}
+
+.form-group {
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  font-weight: 500;
+  text-shadow: 0 0 5px rgba(0, 255, 204, 0.5);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: clamp(0.6rem, 1.5vw, 0.8rem);
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  transition: all 0.3s ease;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.submit-btn {
+  padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(1rem, 2.5vw, 1.5rem);
+  background: linear-gradient(45deg, #00ffcc, #00cc99);
+  color: #1a1a1a;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+.services-list {
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+.services-list h2 {
+  color: #00ffcc;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 30px rgba(0, 255, 204, 0.3);
+}
+
+.service-card-header {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1vw, 1rem);
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+}
+
+.service-card-header img {
+  width: clamp(40px, 8vw, 60px);
+  height: clamp(40px, 8vw, 60px);
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.service-card-header h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.service-card p {
+  color: #cccccc;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}
+
+.service-actions {
+  display: flex;
+  gap: clamp(0.5rem, 1vw, 0.75rem);
+}
+
+.edit-btn,
+.delete-btn {
+  padding: clamp(0.4rem, 1vw, 0.6rem) clamp(0.8rem, 2vw, 1rem);
+  border: none;
+  border-radius: 6px;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background: linear-gradient(45deg, #2196F3, #1976D2);
+  color: #ffffff;
+}
+
+.edit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #2196F3;
+}
+
+.delete-btn {
+  background: linear-gradient(45deg, #f44336, #da190b);
+  color: #ffffff;
+}
+
+.delete-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #f44336;
+}
+
+.services-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.loading-spinner {
+  width: clamp(30px, 5vw, 40px);
+  height: clamp(30px, 5vw, 40px);
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #2196F3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services-header {
+    flex-direction: column;
+    gap: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .reset-btn {
+    width: 100%;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .services-manager {
+    padding: clamp(0.5rem, 2vw, 1rem);
+  }
+
+  .service-form {
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-card-header img {
+    margin-bottom: clamp(0.5rem, 1vw, 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .services-header h2 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+  }
+
+  .services-list h2 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+  }
+
+  .form-group label {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+  }
+
+  .submit-btn {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+  }
+
+  .service-card-header h3 {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+  }
+
+  .service-card p {
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+  }
+}
