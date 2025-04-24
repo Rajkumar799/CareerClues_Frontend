@@ -44,16 +44,16 @@ const Header = () => {
       {/* Mini Top Bar */}
       <div className="mini-header-top-bar">
         {/* <div className="mini-header-left">
-          <span>📞 9686111919 | 9686700500 | 9686800700</span>
+          <span>📞1233333 | 3333333333 | 333333333</span>
         </div> */}
         <div className="mini-header-right">
-  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.facebook.com/profile.php?id=61574350258263" target="_blank" rel="noopener noreferrer">
     <i className="fab fa-facebook-f"></i>
   </a>
-  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.instagram.com/careerclues?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
     <i className="fab fa-instagram"></i>
   </a>
-  <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+  <a href="https://www.linkedin.com/in/manikandanrajendran21/" target="_blank" rel="noopener noreferrer">
     <i className="fab fa-linkedin-in"></i>
   </a>
   <a href="https://youtube.com/@manikandanrajendran141?si=VTJ-vXjwWsSZbmN1" target="_blank" rel="noopener noreferrer">

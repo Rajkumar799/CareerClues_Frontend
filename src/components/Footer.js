@@ -30,17 +30,17 @@ const Footer = () => (
       <div className="footer-section">
         <h4>Follow Us</h4>
         <ul className="socials">
-          <li><a href="#">🐦 Twitter</a></li>
-          <li><a href="#">📘 Facebook</a></li>
-          <li><a href="#">📸 Instagram</a></li>
-          <li><a href="#">💼 LinkedIn</a></li>
+        <li><a href="https://youtube.com/@manikandanrajendran141?si=VTJ-vXjwWsSZbmN1">📺 YouTube</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61574350258263">📘 Facebook</a></li>
+          <li><a href="https://www.instagram.com/careerclues?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">📸 Instagram</a></li>
+          <li><a href="https://www.linkedin.com/in/manikandanrajendran21/">💼 LinkedIn</a></li>
         </ul>
       </div>
 
       <div className="footer-section">
         <h4>Contact</h4>
-        <p>Email: <a href="mailto:support@careerclues.com">support@careerclues.com</a></p>
-        <p>Phone: +1 (800) 123-4567</p>
+        <p>Email: <a href="mailto:manimitit@gmail.com">manimitit@gmail.com</a></p>
+        {/* <p>Phone: +</p> */}
       </div>
     </div>
 
